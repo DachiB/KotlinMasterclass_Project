@@ -41,7 +41,7 @@ class Game {
             require(cellNumber in 1..9) {println("Choose Number from 1-9")}
             setCell(cellNumber = cellNumber - 1)
         } catch (e: Throwable) {
-
+            println("Enter Valid Cell")
         }
     }
 
@@ -52,8 +52,8 @@ class Game {
                 index = cellNumber,
                 element = Cell.Filled(player)
             )
-            generateComputerMove()
             checkTheBoard()
+            generateComputerMove()
             printBoard()
         } else {
             println("Cell Taken, Choose another!")
